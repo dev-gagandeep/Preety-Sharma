@@ -302,10 +302,11 @@ img { max-width: 100%; display: block; }
 .hfc-icon {
   width: 36px; height: 36px; border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
+  color: var(--primary); font-size: 1rem;
 }
 .hfc-icon.green { background: var(--accent-light); }
 .hfc-icon.blue { background: var(--primary-pale); }
+.hfc-icon svg { width: 18px; height: 18px; }
 .hfc-text { font-size: 0.72rem; color: var(--text-light); }
 .hfc-val { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
 
@@ -383,7 +384,13 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   display: flex; align-items: center; gap: 6px;
 }
-.about-tag::before { content:'✓'; color: var(--accent); font-weight: 700; }
+.about-tag::before {
+  background: var(--accent);
+  border-radius: 50%;
+  content: '';
+  height: 6px;
+  width: 6px;
+}
 
 /* ===== EXPERTISE ===== */
 #expertise {
@@ -414,12 +421,14 @@ img { max-width: 100%; display: block; }
   width: 52px; height: 52px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.5rem; margin-bottom: 18px;
+  color: var(--primary);
 }
 .exp-card-icon.blue { background: var(--primary-pale); }
 .exp-card-icon.green { background: var(--accent-light); }
 .exp-card-icon.orange { background: #fff3ec; }
 .exp-card-icon.purple { background: #f0ebff; }
 .exp-card-icon.teal { background: #e8faf8; }
+.exp-card-icon svg { width: 24px; height: 24px; }
 .exp-card-title {
   font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
   color: var(--text-dark); margin-bottom: 16px;
@@ -461,9 +470,10 @@ img { max-width: 100%; display: block; }
   border-radius: 50%; background: white;
   border: 3px solid var(--primary);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; box-shadow: var(--shadow-sm); z-index: 1;
+  color: var(--primary); font-size: 1.4rem; box-shadow: var(--shadow-sm); z-index: 1;
   position: relative;
 }
+.timeline-dot svg { width: 24px; height: 24px; }
 .timeline-content {
   flex: 1; background: white; border-radius: var(--radius);
   padding: 28px; border: 1px solid var(--border);
@@ -522,9 +532,10 @@ img { max-width: 100%; display: block; }
 .project-icon {
   width: 60px; height: 60px; border-radius: 16px;
   background: white; display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; box-shadow: var(--shadow-sm);
+  color: var(--primary); font-size: 1.8rem; box-shadow: var(--shadow-sm);
   margin-bottom: 16px;
 }
+.project-icon svg { width: 26px; height: 26px; }
 .project-name {
   font-family: var(--font-display); font-size: 1.15rem;
   font-weight: 700; color: var(--text-dark); margin-bottom: 4px;
@@ -584,7 +595,23 @@ img { max-width: 100%; display: block; }
   background: var(--primary-pale); border-color: var(--primary);
   transform: translateY(-3px); box-shadow: var(--shadow-sm);
 }
-.tool-icon { font-size: 1.6rem; margin-bottom: 8px; }
+.tool-icon {
+  align-items: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  margin-bottom: 8px;
+  width: 42px;
+}
+.tool-icon img {
+  display: block;
+  height: 28px;
+  object-fit: contain;
+  width: 28px;
+}
 .tool-name {
   font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
   color: var(--text-mid); line-height: 1.3;
@@ -612,7 +639,8 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(8px); transition: var(--transition);
 }
 .strength-item:hover { background: rgba(255,255,255,0.15); transform: translateY(-4px); }
-.strength-icon { font-size: 2rem; margin-bottom: 12px; }
+.strength-icon { color: white; margin-bottom: 12px; }
+.strength-icon svg { width: 30px; height: 30px; }
 .strength-text {
   font-family: var(--font-display); font-size: 0.9rem;
   font-weight: 600; color: rgba(255,255,255,0.9); line-height: 1.5;
@@ -630,7 +658,13 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-sm); transition: var(--transition); min-width: 140px;
 }
 .lang-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
-.lang-flag { font-size: 2.2rem; margin-bottom: 10px; }
+.lang-flag {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 .lang-name {
   font-family: var(--font-display); font-size: 0.95rem;
   font-weight: 700; color: var(--text-dark);
@@ -654,8 +688,9 @@ img { max-width: 100%; display: block; }
   width: 52px; height: 52px; border-radius: 14px;
   background: var(--primary-pale); display: flex;
   align-items: center; justify-content: center;
-  font-size: 1.5rem; flex-shrink: 0;
+  color: var(--primary); font-size: 1.5rem; flex-shrink: 0;
 }
+.edu-icon svg { width: 24px; height: 24px; }
 .edu-degree {
   font-family: var(--font-display); font-size: 1rem;
   font-weight: 700; color: var(--text-dark); margin-bottom: 4px;
@@ -765,7 +800,7 @@ footer {
   display: flex; align-items: center; gap: 8px;
   font-size: 0.85rem; color: rgba(255,255,255,0.7);
 }
-.footer-contact-item span { color: var(--accent); }
+.footer-contact-item i { color: var(--accent); width: 15px; height: 15px; }
 .footer-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0; }
 .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
 
@@ -901,14 +936,14 @@ footer {
       <div class="hero-visual">
         <!-- Floating cards -->
         <div class="hero-float-card" style="top:-20px;right:-20px;">
-          <div class="hfc-icon green">📈</div>
+          <div class="hfc-icon green"><i data-lucide="trending-up"></i></div>
           <div>
             <div class="hfc-val">+142%</div>
             <div class="hfc-text">Organic Traffic Growth</div>
           </div>
         </div>
         <div class="hero-float-card" style="bottom:40px;left:-30px;">
-          <div class="hfc-icon blue">🔍</div>
+          <div class="hfc-icon blue"><i data-lucide="search"></i></div>
           <div>
             <div class="hfc-val">Top 3</div>
             <div class="hfc-text">Keyword Rankings Achieved</div>
@@ -987,7 +1022,7 @@ footer {
         </div>
       </div>
       <div class="about-content">
-        <span class="section-tag">✦ Professional Summary</span>
+        <span class="section-tag">Professional Summary</span>
         <h2 class="section-title">SEO Executive<br><span>Driving Organic Growth</span></h2>
         <div class="about-highlight-box aos aos-delay-1">
           <p>Result-driven and detail-oriented SEO Executive with experience in improving website visibility, search rankings, organic traffic, and brand presence across industries including news portals, service-based businesses, local SEO websites, tattoo websites, and hair care businesses.</p>
@@ -1018,7 +1053,7 @@ footer {
 <section id="expertise">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Core SEO Expertise</span>
+      <span class="section-tag">Core SEO Expertise</span>
       <h2 class="section-title">Complete <span>SEO Solutions</span><br>Under One Roof</h2>
       <p class="section-sub">From keyword research to technical audits — every aspect of SEO covered with precision and strategy.</p>
     </div>
@@ -1026,7 +1061,7 @@ footer {
 
       <!-- On-Page SEO -->
       <div class="exp-card aos aos-delay-1">
-        <div class="exp-card-icon blue">🎯</div>
+        <div class="exp-card-icon blue"><i data-lucide="target"></i></div>
         <div class="exp-card-title">
           On-Page SEO
           <span>11 Services</span>
@@ -1047,7 +1082,7 @@ footer {
 
       <!-- Off-Page SEO -->
       <div class="exp-card aos aos-delay-2">
-        <div class="exp-card-icon green">🔗</div>
+        <div class="exp-card-icon green"><i data-lucide="link"></i></div>
         <div class="exp-card-title">
           Off-Page SEO
           <span>12 Services</span>
@@ -1068,7 +1103,7 @@ footer {
 
       <!-- Technical SEO -->
       <div class="exp-card aos aos-delay-3">
-        <div class="exp-card-icon orange">⚙️</div>
+        <div class="exp-card-icon orange"><i data-lucide="settings"></i></div>
         <div class="exp-card-title">
           Technical SEO
           <span>11 Services</span>
@@ -1089,7 +1124,7 @@ footer {
 
       <!-- Local SEO -->
       <div class="exp-card aos aos-delay-1">
-        <div class="exp-card-icon purple">📍</div>
+        <div class="exp-card-icon purple"><i data-lucide="map-pin"></i></div>
         <div class="exp-card-title">
           Local SEO
           <span>7 Services</span>
@@ -1107,7 +1142,7 @@ footer {
 
       <!-- SEO Strategy -->
       <div class="exp-card aos aos-delay-2">
-        <div class="exp-card-icon teal">📊</div>
+        <div class="exp-card-icon teal"><i data-lucide="bar-chart-3"></i></div>
         <div class="exp-card-title">
           SEO Strategy & Reporting
           <span>9 Services</span>
@@ -1132,7 +1167,7 @@ footer {
 <section id="experience">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Work Experience</span>
+      <span class="section-tag">Work Experience</span>
       <h2 class="section-title">My <span>Professional Journey</span></h2>
       <p class="section-sub">3+ years of hands-on experience driving organic growth for businesses across diverse industries.</p>
     </div>
@@ -1141,7 +1176,7 @@ footer {
 
       <!-- Job 1 -->
       <div class="timeline-item aos">
-        <div class="timeline-dot">💼</div>
+        <div class="timeline-dot"><i data-lucide="briefcase-business"></i></div>
         <div class="timeline-content">
           <div class="tl-top">
             <div>
@@ -1166,7 +1201,7 @@ footer {
 
       <!-- Job 2 -->
       <div class="timeline-item aos aos-delay-1">
-        <div class="timeline-dot">🚀</div>
+        <div class="timeline-dot"><i data-lucide="rocket"></i></div>
         <div class="timeline-content">
           <div class="tl-top">
             <div>
@@ -1189,7 +1224,7 @@ footer {
 
       <!-- Job 3 -->
       <div class="timeline-item aos aos-delay-2">
-        <div class="timeline-dot">📰</div>
+        <div class="timeline-dot"><i data-lucide="newspaper"></i></div>
         <div class="timeline-content">
           <div class="tl-top">
             <div>
@@ -1216,7 +1251,7 @@ footer {
 <section id="projects">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Project Portfolio</span>
+      <span class="section-tag">Project Portfolio</span>
       <h2 class="section-title">Real Results, <span>Real Projects</span></h2>
       <p class="section-sub">Hands-on SEO work delivered for clients across diverse industries with measurable outcomes.</p>
     </div>
@@ -1224,7 +1259,7 @@ footer {
 
       <div class="project-card aos aos-delay-1">
         <div class="project-header">
-          <div class="project-icon">💇</div>
+          <div class="project-icon"><i data-lucide="scissors"></i></div>
           <div class="project-name">Hair Hub Hillcrest</div>
           <div class="project-type">Hair Care Business · Local SEO</div>
         </div>
@@ -1244,7 +1279,7 @@ footer {
 
       <div class="project-card aos aos-delay-2">
         <div class="project-header">
-          <div class="project-icon">🎨</div>
+          <div class="project-icon"><i data-lucide="palette"></i></div>
           <div class="project-name">QuickTattz</div>
           <div class="project-type">Tattoo Studio · Australia · Full SEO</div>
         </div>
@@ -1270,7 +1305,7 @@ footer {
 <section id="skills">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Skills & Tools</span>
+      <span class="section-tag">Skills & Tools</span>
       <h2 class="section-title">My <span>SEO Skill Set</span></h2>
       <p class="section-sub">A comprehensive toolkit for delivering complete SEO results from strategy to execution.</p>
     </div>
@@ -1301,51 +1336,51 @@ footer {
         <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:20px;" class="aos">SEO Tools</h3>
         <div class="tools-grid aos aos-delay-2">
           <div class="tool-card">
-            <div class="tool-icon">📊</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=analytics.google.com&sz=64" alt="Google Analytics logo"></div>
             <div class="tool-name">Google Analytics</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🔍</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=search.google.com&sz=64" alt="Google Search Console logo"></div>
             <div class="tool-name">Search Console</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🗝️</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=ads.google.com&sz=64" alt="Google Keyword Planner logo"></div>
             <div class="tool-name">Keyword Planner</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">💡</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=neilpatel.com&sz=64" alt="Ubersuggest logo"></div>
             <div class="tool-name">Ubersuggest</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🔗</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs logo"></div>
             <div class="tool-name">Ahrefs Basic</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">⚡</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=semrush.com&sz=64" alt="SEMrush logo"></div>
             <div class="tool-name">SEMrush Basic</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🐸</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=screamingfrog.co.uk&sz=64" alt="Screaming Frog logo"></div>
             <div class="tool-name">Screaming Frog</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🚀</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=pagespeed.web.dev&sz=64" alt="PageSpeed Insights logo"></div>
             <div class="tool-name">PageSpeed Insights</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🟢</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=yoast.com&sz=64" alt="Yoast SEO logo"></div>
             <div class="tool-name">Yoast SEO</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">🏆</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=rankmath.com&sz=64" alt="Rank Math logo"></div>
             <div class="tool-name">Rank Math</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">📍</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=business.google.com&sz=64" alt="Google Business Profile logo"></div>
             <div class="tool-name">Google Business</div>
           </div>
           <div class="tool-card">
-            <div class="tool-icon">📈</div>
+            <div class="tool-icon"><img src="https://www.google.com/s2/favicons?domain=trends.google.com&sz=64" alt="Google Trends logo"></div>
             <div class="tool-name">Google Trends</div>
           </div>
         </div>
@@ -1358,33 +1393,33 @@ footer {
 <section id="strengths" class="strengths">
   <div class="container strengths-inner">
     <div class="section-header aos" style="text-align:left;">
-      <span class="section-tag" style="background:rgba(255,255,255,0.15);color:white;">✦ Professional Strengths</span>
+      <span class="section-tag" style="background:rgba(255,255,255,0.15);color:white;">Professional Strengths</span>
       <h2 class="section-title">What Makes Me <span>Stand Out</span></h2>
       <p class="section-sub">The qualities and professional traits that drive consistent SEO results.</p>
     </div>
     <div class="strengths-grid">
       <div class="strength-item aos aos-delay-1">
-        <div class="strength-icon">🧠</div>
+        <div class="strength-icon"><i data-lucide="brain"></i></div>
         <div class="strength-text">Strong understanding of SEO fundamentals and best practices</div>
       </div>
       <div class="strength-item aos aos-delay-2">
-        <div class="strength-icon">⚡</div>
+        <div class="strength-icon"><i data-lucide="zap"></i></div>
         <div class="strength-text">Ability to manage multiple SEO tasks with efficiency</div>
       </div>
       <div class="strength-item aos aos-delay-3">
-        <div class="strength-icon">🔑</div>
+        <div class="strength-icon"><i data-lucide="key-round"></i></div>
         <div class="strength-text">Good keyword research and content optimization skills</div>
       </div>
       <div class="strength-item aos aos-delay-1">
-        <div class="strength-icon">📍</div>
+        <div class="strength-icon"><i data-lucide="map-pin"></i></div>
         <div class="strength-text">Deep knowledge of local SEO and Google Business Profile</div>
       </div>
       <div class="strength-item aos aos-delay-2">
-        <div class="strength-icon">📋</div>
+        <div class="strength-icon"><i data-lucide="clipboard-list"></i></div>
         <div class="strength-text">Consistent in reporting and performance tracking</div>
       </div>
       <div class="strength-item aos aos-delay-3">
-        <div class="strength-icon">🌱</div>
+        <div class="strength-icon"><i data-lucide="sprout"></i></div>
         <div class="strength-text">Quick learner, team-oriented, and focused on organic growth</div>
       </div>
     </div>
@@ -1395,22 +1430,22 @@ footer {
 <div class="languages-section">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Languages</span>
+      <span class="section-tag">Languages</span>
       <h2 class="section-title">Languages I <span>Speak</span></h2>
     </div>
     <div class="lang-grid">
       <div class="lang-card aos aos-delay-1">
-        <div class="lang-flag">🇮🇳</div>
+        <div class="lang-flag">HI</div>
         <div class="lang-name">Hindi</div>
         <div class="lang-level">Native / Fluent</div>
       </div>
       <div class="lang-card aos aos-delay-2">
-        <div class="lang-flag">🇬🇧</div>
+        <div class="lang-flag">EN</div>
         <div class="lang-name">English</div>
         <div class="lang-level">Professional</div>
       </div>
       <div class="lang-card aos aos-delay-3">
-        <div class="lang-flag">🏳️</div>
+        <div class="lang-flag">PA</div>
         <div class="lang-name">Punjabi</div>
         <div class="lang-level">Native / Fluent</div>
       </div>
@@ -1422,12 +1457,12 @@ footer {
 <section id="education">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Education</span>
+      <span class="section-tag">Education</span>
       <h2 class="section-title">Academic <span>Background</span></h2>
     </div>
     <div class="edu-grid">
       <div class="edu-card aos aos-delay-1">
-        <div class="edu-icon">🎓</div>
+        <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
         <div>
           <div class="edu-degree">Bachelor of Computer Applications</div>
           <div class="edu-school">Punjab University, Chandigarh</div>
@@ -1435,7 +1470,7 @@ footer {
         </div>
       </div>
       <div class="edu-card aos aos-delay-2">
-        <div class="edu-icon">📚</div>
+        <div class="edu-icon"><i data-lucide="book-open"></i></div>
         <div>
           <div class="edu-degree">Higher Secondary Education</div>
           <div class="edu-school">Govt. Senior Secondary School, Sec 45, Chandigarh</div>
@@ -1450,7 +1485,7 @@ footer {
 <section id="contact">
   <div class="container">
     <div class="section-header aos">
-      <span class="section-tag">✦ Let's Connect</span>
+      <span class="section-tag">Let's Connect</span>
       <h2 class="section-title">Let's Grow Your <span>Organic Traffic</span></h2>
       <p class="section-sub">Ready to improve your search rankings? Fill in the form and I'll get back to you with a customized SEO plan.</p>
     </div>
@@ -1460,21 +1495,21 @@ footer {
         <p>Whether you need a full SEO strategy or a quick audit — let's talk about how I can help your business rank higher and grow organically.</p>
         <div class="contact-details">
           <div class="contact-item">
-            <div class="ci-icon">📞</div>
+            <div class="ci-icon"><i data-lucide="phone"></i></div>
             <div>
               <div class="ci-label">Phone</div>
               <div class="ci-val">6284813650</div>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">✉️</div>
+            <div class="ci-icon"><i data-lucide="mail"></i></div>
             <div>
               <div class="ci-label">Email</div>
               <div class="ci-val">preetykumari1099@gmail.com</div>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">📍</div>
+            <div class="ci-icon"><i data-lucide="map-pin"></i></div>
             <div>
               <div class="ci-label">Location</div>
               <div class="ci-val">Bir Bakarpur, Sector 15, Dera Bassi, Punjab</div>
@@ -1543,17 +1578,17 @@ footer {
       <div class="footer-role">SEO Executive | SEO Specialist | Digital Marketing Professional</div>
       <div class="footer-contacts">
         <div class="footer-contact-item">
-          <span>📞</span> 6284813650
+          <i data-lucide="phone"></i> 6284813650
         </div>
         <div class="footer-contact-item">
-          <span>✉️</span> preetykumari1099@gmail.com
+          <i data-lucide="mail"></i> preetykumari1099@gmail.com
         </div>
         <div class="footer-contact-item">
-          <span>📍</span> Dera Bassi, Punjab
+          <i data-lucide="map-pin"></i> Dera Bassi, Punjab
         </div>
       </div>
       <div class="footer-divider"></div>
-      <div class="footer-copy">© 2025 Preety Sharma. All rights reserved. | SEO Executive & Digital Marketing Professional</div>
+      <div class="footer-copy">Copyright 2025 Preety Sharma. All rights reserved. | SEO Executive & Digital Marketing Professional</div>
     </div>
   </div>
 </footer>

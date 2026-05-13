@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preety Sharma - SEO Executive, SEO Specialist, and Digital Marketing Professional portfolio.">
+  <title>Preety Sharma | SEO Executive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    :root {
+      --primary: #1a6bff;
+      --primary-dark: #0f55ba;
+      --primary-pale: #eaf2ff;
+      --accent: #00b884;
+      --accent-pale: #e8fff6;
+      --sky: #f2f9ff;
+      --white: #ffffff;
+      --off-white: #f8fbff;
+      --text-dark: #0d1b2a;
+      --text-mid: #405167;
+      --text-light: #6b7c93;
+      --border: #dbe7f3;
+      --shadow-sm: 0 8px 24px rgba(26, 107, 255, 0.08);
+      --shadow-md: 0 18px 48px rgba(26, 107, 255, 0.13);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --font-display: "Lexend", "Figtree", sans-serif;
+      --font-body: "Figtree", "Lexend", sans-serif;
+      --transition: 0.25s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--white);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+    section { padding: 92px 0; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .section-header { max-width: 740px; margin: 0 auto 48px; text-align: center; }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: var(--primary-pale);
+      color: var(--primary);
+      font-family: var(--font-display);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      padding: 7px 15px;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.16; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 800; letter-spacing: 0; }
+    h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; }
+    h3 { font-size: 1.2rem; font-weight: 700; }
+    p { color: var(--text-light); }
+    .section-title span, .highlight {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .btn {
+      align-items: center;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      gap: 9px;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 24px;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #36a3ff);
+      box-shadow: 0 12px 28px rgba(26, 107, 255, 0.25);
+      color: var(--white);
+    }
+    .btn-outline {
+      background: var(--white);
+      border: 1px solid #bfd8f2;
+      color: var(--primary-dark);
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+    header {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.92);
+      border-bottom: 1px solid var(--border);
+      left: 0;
+      position: sticky;
+      right: 0;
+      top: 0;
+      z-index: 50;
+    }
+    .nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 74px;
+    }
+    .logo {
+      align-items: center;
+      display: flex;
+      font-family: var(--font-display);
+      font-weight: 800;
+      gap: 10px;
+    }
+    .logo-mark {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      color: var(--white);
+      display: grid;
+      height: 42px;
+      place-items: center;
+      width: 42px;
+    }
+    .nav-links { align-items: center; display: flex; gap: 5px; }
+    .nav-links a {
+      border-radius: 999px;
+      color: var(--text-mid);
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { background: var(--primary-pale); color: var(--primary); }
+    .menu-toggle {
+      background: var(--primary-pale);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--primary);
+      cursor: pointer;
+      display: none;
+      height: 42px;
+      place-items: center;
+      width: 42px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f1f8ff 0%, #f3fff9 55%, #ffffff 100%);
+      min-height: calc(100vh - 74px);
+      overflow: hidden;
+      padding: 92px 0;
+      position: relative;
+    }
+    #hero-canvas { inset: 0; opacity: 0.65; position: absolute; width: 100%; height: 100%; }
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 56px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      align-items: center;
+      background: var(--white);
+      border: 1px solid #cfebdc;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      color: var(--accent);
+      display: inline-flex;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      gap: 9px;
+      margin-bottom: 22px;
+      padding: 8px 15px;
+      text-transform: uppercase;
+    }
+    .hero-copy { font-size: 1.05rem; max-width: 720px; margin: 24px 0 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 18px; }
+    .stat {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      min-width: 148px;
+      padding: 14px 16px;
+    }
+    .stat strong { color: var(--primary); display: block; font-family: var(--font-display); font-size: 1.5rem; line-height: 1; }
+    .stat span { color: var(--text-light); display: block; font-size: 0.8rem; margin-top: 6px; }
+
+    .dashboard {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-md);
+      padding: 24px;
+      position: relative;
+    }
+    .dashboard-head { align-items: center; display: flex; justify-content: space-between; margin-bottom: 18px; }
+    .dash-title { font-family: var(--font-display); font-weight: 700; }
+    .dash-pill { background: var(--accent-pale); border-radius: 999px; color: var(--accent); font-size: 0.74rem; font-weight: 700; padding: 5px 10px; }
+    .search-box {
+      align-items: center;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-mid);
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 12px 14px;
+    }
+    .chart { align-items: end; display: flex; gap: 8px; height: 160px; margin: 18px 0; }
+    .bar {
+      background: linear-gradient(180deg, var(--primary), var(--accent));
+      border-radius: 8px 8px 0 0;
+      flex: 1;
+      min-width: 12px;
+    }
+    .dash-grid { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+    .dash-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 12px; padding: 14px; text-align: center; }
+    .dash-card strong { color: var(--primary); display: block; font-family: var(--font-display); }
+    .keyword-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .keyword-row span {
+      background: var(--primary-pale);
+      border-radius: 999px;
+      color: var(--primary);
+      font-family: var(--font-display);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 6px 10px;
+    }
+
+    .about { background: var(--white); }
+    .about-grid { align-items: center; display: grid; gap: 42px; grid-template-columns: 0.8fr 1.2fr; }
+    .profile-card {
+      background: linear-gradient(135deg, var(--primary-pale), var(--accent-pale));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      padding: 28px;
+    }
+    .avatar {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 18px;
+      color: var(--white);
+      display: grid;
+      font-family: var(--font-display);
+      font-size: 2.3rem;
+      font-weight: 800;
+      height: 92px;
+      margin-bottom: 20px;
+      place-items: center;
+      width: 92px;
+    }
+    .contact-list { display: grid; gap: 10px; margin-top: 18px; }
+    .contact-list a, .contact-list div {
+      align-items: center;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(219, 231, 243, 0.9);
+      border-radius: 12px;
+      color: var(--text-mid);
+      display: flex;
+      font-weight: 600;
+      gap: 10px;
+      padding: 10px 12px;
+      transition: var(--transition);
+    }
+    .contact-list a:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+
+    .grid-2 { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .card:hover { border-color: rgba(26,107,255,0.35); box-shadow: var(--shadow-md); transform: translateY(-5px); }
+    .icon-box {
+      align-items: center;
+      background: var(--primary-pale);
+      border-radius: 14px;
+      color: var(--primary);
+      display: flex;
+      height: 52px;
+      justify-content: center;
+      margin-bottom: 16px;
+      width: 52px;
+    }
+    .check-list { display: grid; gap: 8px; margin-top: 16px; }
+    .check-list li { color: var(--text-mid); font-size: 0.9rem; padding-left: 18px; position: relative; }
+    .check-list li::before {
+      background: var(--accent);
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 6px;
+    }
+
+    .soft-section { background: linear-gradient(180deg, var(--off-white), var(--accent-pale)); }
+    .timeline { display: grid; gap: 22px; margin: 0 auto; max-width: 920px; }
+    .timeline-card .meta { color: var(--primary); font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; margin: 8px 0 14px; }
+    .project-card { overflow: hidden; padding: 0; }
+    .project-top {
+      background: linear-gradient(135deg, var(--primary-pale), var(--accent-pale));
+      padding: 26px;
+    }
+    .project-body { padding: 24px; }
+    .project-link { color: var(--primary); display: inline-flex; font-family: var(--font-display); font-weight: 700; gap: 7px; margin-top: 14px; }
+
+    .resume-section {
+      background: linear-gradient(135deg, var(--primary-pale), var(--accent-pale));
+      padding: 76px 0;
+    }
+    .resume-card {
+      align-items: center;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr auto;
+      padding: 34px;
+    }
+
+    .skills-cloud { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .skill-tag {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-mid);
+      font-family: var(--font-display);
+      font-size: 0.83rem;
+      font-weight: 600;
+      padding: 9px 13px;
+    }
+    .tools-grid { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 34px; }
+    .tool-card {
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 12px;
+      min-height: 78px;
+      padding: 14px;
+      transition: var(--transition);
+    }
+    .tool-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+    .tool-logo {
+      align-items: center;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex: 0 0 44px;
+      height: 44px;
+      justify-content: center;
+      width: 44px;
+    }
+    .tool-logo img { height: 28px; object-fit: contain; width: 28px; }
+    .tool-card strong { color: var(--text-mid); font-family: var(--font-display); font-size: 0.84rem; line-height: 1.25; }
+
+    .contact { background: linear-gradient(135deg, #f1f8ff, #f0fff8); }
+    .contact-grid { display: grid; gap: 34px; grid-template-columns: 0.9fr 1.1fr; }
+    .contact-panel, .form-panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      padding: 30px;
+    }
+    .contact-items { display: grid; gap: 13px; margin-top: 24px; }
+    .contact-item {
+      align-items: center;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-mid);
+      display: flex;
+      font-weight: 700;
+      gap: 12px;
+      padding: 13px 14px;
+      transition: var(--transition);
+    }
+    a.contact-item:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+    .form-grid { display: grid; gap: 15px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .form-group { display: grid; gap: 7px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { color: var(--text-mid); font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; }
+    input, select, textarea {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-dark);
+      font: inherit;
+      outline: none;
+      padding: 12px 13px;
+      width: 100%;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(26,107,255,0.1); }
+    #form-message { border-radius: 10px; display: none; font-weight: 700; margin-top: 14px; padding: 12px 14px; }
+    #form-message.success { background: var(--accent-pale); color: #047451; display: block; }
+    #form-message.error { background: #fff0ee; color: #b42318; display: block; }
+
+    footer { background: var(--text-dark); color: var(--white); padding: 42px 0; text-align: center; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; margin-bottom: 5px; }
+    .footer-role { color: rgba(255,255,255,0.62); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 14px 24px; justify-content: center; }
+    .footer-links a, .footer-links span { align-items: center; color: rgba(255,255,255,0.75); display: inline-flex; gap: 7px; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 22px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .about-grid, .contact-grid, .resume-card { grid-template-columns: 1fr; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      section { padding: 72px 0; }
+      .menu-toggle { display: grid; }
+      .nav-links {
+        background: rgba(255,255,255,0.98);
+        border-bottom: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        left: 0;
+        padding: 10px 24px 18px;
+        position: absolute;
+        right: 0;
+        top: 74px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li, .nav-links a { width: 100%; }
+      .hero-actions .btn, .resume-card .btn { width: 100%; }
+      .form-grid, .dash-grid, .tools-grid { grid-template-columns: 1fr; }
+      .dashboard, .contact-panel, .form-panel, .resume-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo"><span class="logo-mark">PS</span> Preety Sharma</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="hero-canvas"></canvas>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="hero-badge"><i data-lucide="trending-up" style="width:16px;height:16px;"></i> Available for SEO Projects</div>
+          <h1>Helping Businesses Grow with <span class="highlight">Smart SEO Strategies</span></h1>
+          <p class="hero-copy">SEO Executive with hands-on experience in on-page SEO, off-page SEO, technical SEO, local SEO, keyword research, content optimization, backlink building, Google Analytics, Google Search Console, and performance-driven SEO strategies.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> View My Work</a>
+            <a class="btn btn-outline" href="#contact"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Get SEO Consultation</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>3+</strong><span>Years Experience</span></div>
+            <div class="stat"><strong>20+</strong><span>Projects Completed</span></div>
+            <div class="stat"><strong>5</strong><span>SEO Specializations</span></div>
+          </div>
+        </div>
+        <div class="dashboard reveal">
+          <div class="dashboard-head">
+            <div class="dash-title">SEO Performance Dashboard</div>
+            <div class="dash-pill">Live Report</div>
+          </div>
+          <div class="search-box"><i data-lucide="search" style="width:18px;height:18px;"></i> organic traffic growth strategy</div>
+          <div class="chart" aria-label="Organic traffic rising chart">
+            <span class="bar" style="height:35%"></span>
+            <span class="bar" style="height:48%"></span>
+            <span class="bar" style="height:42%"></span>
+            <span class="bar" style="height:62%"></span>
+            <span class="bar" style="height:74%"></span>
+            <span class="bar" style="height:91%"></span>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-card"><strong>+84%</strong><span>Rankings</span></div>
+            <div class="dash-card"><strong>+62%</strong><span>Traffic</span></div>
+            <div class="dash-card"><strong>+39%</strong><span>Backlinks</span></div>
+          </div>
+          <div class="keyword-row">
+            <span>Keywords</span><span>Local SEO</span><span>On-Page</span><span>Backlinks</span><span>Analytics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="profile-card reveal">
+          <div class="avatar">PS</div>
+          <h2>PREETY SHARMA</h2>
+          <p>SEO Executive | SEO Specialist | Digital Marketing Professional</p>
+          <div class="contact-list">
+            <a href="tel:6284813650"><i data-lucide="phone" style="width:17px;height:17px;"></i> 6284813650</a>
+            <a href="mailto:preetykumari1099@gmail.com"><i data-lucide="mail" style="width:17px;height:17px;"></i> preetykumari1099@gmail.com</a>
+            <a href="https://wa.me/916284813650" target="_blank" rel="noopener"><i data-lucide="message-circle" style="width:17px;height:17px;"></i> WhatsApp</a>
+            <div><i data-lucide="map-pin" style="width:17px;height:17px;"></i> Bir Bakarpur, Sector 15, Dera Bassi, Punjab</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="section-tag">Professional Summary</span>
+          <h2 class="section-title">SEO Executive <span>Driving Organic Growth</span></h2>
+          <p>Result-driven and detail-oriented SEO Executive with experience in improving website visibility, search rankings, organic traffic, and brand presence across industries including news portals, service-based businesses, local SEO websites, tattoo websites, and hair care businesses. Skilled in creating SEO strategies that include content planning, competitor analysis, website optimization, link building, local SEO, and performance tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="expertise">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Core SEO Expertise</span>
+          <h2 class="section-title">Complete <span>SEO Solutions</span> Under One Roof</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <div class="icon-box"><i data-lucide="target"></i></div>
+            <h3>On-Page SEO</h3>
+            <ul class="check-list">
+              <li>Keyword research and keyword mapping</li>
+              <li>Meta title and meta description optimization</li>
+              <li>Header tag and URL structure optimization</li>
+              <li>Internal linking, image alt tags, content optimization</li>
+              <li>Blog SEO, landing page SEO, and competitor content analysis</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon-box"><i data-lucide="link"></i></div>
+            <h3>Off-Page SEO</h3>
+            <ul class="check-list">
+              <li>High-quality backlink creation</li>
+              <li>Guest posting coordination and brand mentions</li>
+              <li>Business listings, classifieds, profiles, and directories</li>
+              <li>Social bookmarking, article submissions, forums, Web 2.0</li>
+              <li>Backlink monitoring and gap opportunities</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon-box"><i data-lucide="settings"></i></div>
+            <h3>Technical SEO</h3>
+            <ul class="check-list">
+              <li>Website SEO audits</li>
+              <li>Indexing and crawling checks</li>
+              <li>Google Search Console issue monitoring</li>
+              <li>Sitemap, robots.txt, canonicals, redirects, and broken links</li>
+              <li>Page speed, mobile checks, Core Web Vitals, schema recommendations</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <div class="icon-box"><i data-lucide="map-pin"></i></div>
+            <h3>Local SEO</h3>
+            <ul class="check-list">
+              <li>Google Business Profile optimization</li>
+              <li>Local keyword targeting and NAP consistency checks</li>
+              <li>Local citations and map ranking strategies</li>
+              <li>Review management suggestions</li>
+              <li>Location-based landing page optimization</li>
+            </ul>
+          </article>
+          <article class="card reveal" style="grid-column:1/-1;">
+            <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
+            <h3>SEO Strategy & Reporting</h3>
+            <ul class="check-list">
+              <li>Monthly SEO planning, competitor analysis, and keyword ranking tracking</li>
+              <li>Organic traffic analysis, SEO performance reports, and activity tracking</li>
+              <li>Content gap analysis, backlink gap analysis, website growth strategy, and conversion-focused recommendations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Work Experience</span>
+          <h2 class="section-title">My <span>Professional Journey</span></h2>
+        </div>
+        <div class="timeline">
+          <article class="card timeline-card reveal">
+            <h3>SEO Executive</h3>
+            <div class="meta">Fast Visibility Tech, Zirakpur | 2024 - Present</div>
+            <ul class="check-list">
+              <li>Developed SEO strategies for client websites based on business goals and competition.</li>
+              <li>Performed keyword research for service pages, blogs, and local SEO campaigns.</li>
+              <li>Optimized pages with meta titles, descriptions, headings, URLs, and internal links.</li>
+              <li>Handled off-page SEO including backlinks, listings, classifieds, bookmarking, and profiles.</li>
+              <li>Worked on Google Business Profile optimization and SEO performance reporting.</li>
+            </ul>
+          </article>
+          <article class="card timeline-card reveal">
+            <h3>SEO Executive + Social Media Management</h3>
+            <div class="meta">Mansa Web Solutions | December 2022 - November 2024</div>
+            <ul class="check-list">
+              <li>Built backlinks to improve website authority and search engine rankings.</li>
+              <li>Performed keyword research and optimized meta titles, descriptions, headings, and content.</li>
+              <li>Tracked SEO performance using Google Analytics and Google Search Console.</li>
+              <li>Managed social media posts, content calendars, and posting schedules.</li>
+            </ul>
+          </article>
+          <article class="card timeline-card reveal">
+            <h3>Content Optimization Executive</h3>
+            <div class="meta">Punjab News Express | May 2021 - May 2022</div>
+            <ul class="check-list">
+              <li>Optimized news content for better search engine visibility.</li>
+              <li>Added relevant keywords naturally into content.</li>
+              <li>Improved headlines, meta descriptions, article structure, readability, and search performance.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Project Portfolio</span>
+          <h2 class="section-title">Real Results, <span>Real Projects</span></h2>
+        </div>
+        <div class="grid-2">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <div class="icon-box"><i data-lucide="map"></i></div>
+              <h3>Hair Hub Hillcrest</h3>
+              <p>Hair Care Business | Local SEO</p>
+            </div>
+            <div class="project-body">
+              <p>Worked on local SEO visibility, Google Business Profile optimization, service keyword targeting, and off-page SEO activities to improve search presence for the business.</p>
+              <a class="project-link" href="https://share.google/BwvTcrBPoC50RFVYY" target="_blank" rel="noopener">View Project <i data-lucide="external-link" style="width:15px;height:15px;"></i></a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <div class="icon-box"><i data-lucide="paintbrush"></i></div>
+              <h3>QuickTattz</h3>
+              <p>Tattoo Studio | Australia | Full SEO</p>
+            </div>
+            <div class="project-body">
+              <p>Worked on SEO optimization for the tattoo industry website, including keyword research, on-page optimization, content suggestions, backlink activities, and visibility improvement strategies.</p>
+              <a class="project-link" href="https://quicktattz.com.au/" target="_blank" rel="noopener">View Website <i data-lucide="external-link" style="width:15px;height:15px;"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section" id="resume">
+      <div class="container">
+        <div class="resume-card reveal">
+          <div>
+            <span class="section-tag">Resume</span>
+            <h2>Download Preety Sharma's Professional Resume</h2>
+            <p>Download a simple Word-compatible resume document with SEO experience, project work, skills, tools, education, languages, and contact details.</p>
+          </div>
+          <button type="button" class="btn btn-primary" id="downloadResume"><i data-lucide="download" style="width:16px;height:16px;"></i> Download Resume</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Skills & Tools</span>
+          <h2 class="section-title">My <span>SEO Skill Set</span></h2>
+        </div>
+        <div class="skills-cloud reveal">
+          <span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Google Search Console</span>
+          <span class="skill-tag">Keyword Research</span>
+          <span class="skill-tag">On-Page SEO</span>
+          <span class="skill-tag">Off-Page SEO</span>
+          <span class="skill-tag">Technical SEO Audits</span>
+          <span class="skill-tag">Local SEO</span>
+          <span class="skill-tag">Google Business Profile Optimization</span>
+          <span class="skill-tag">Backlink Building</span>
+          <span class="skill-tag">Content Optimization</span>
+          <span class="skill-tag">SEO Reporting</span>
+          <span class="skill-tag">Competitor Analysis</span>
+          <span class="skill-tag">Website Audit</span>
+          <span class="skill-tag">Social Media Management</span>
+          <span class="skill-tag">Canva Basic</span>
+          <span class="skill-tag">MS Office</span>
+          <span class="skill-tag">WordPress SEO Basics</span>
+        </div>
+
+        <div class="tools-grid reveal">
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=analytics.google.com&sz=64" alt="Google Analytics logo"></div><strong>Google Analytics</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=search.google.com&sz=64" alt="Google Search Console logo"></div><strong>Google Search Console</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=ads.google.com&sz=64" alt="Google Keyword Planner logo"></div><strong>Google Keyword Planner</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=neilpatel.com&sz=64" alt="Ubersuggest logo"></div><strong>Ubersuggest</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs logo"></div><strong>Ahrefs Basic</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=semrush.com&sz=64" alt="SEMrush logo"></div><strong>SEMrush Basic</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=screamingfrog.co.uk&sz=64" alt="Screaming Frog logo"></div><strong>Screaming Frog Basic</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=pagespeed.web.dev&sz=64" alt="PageSpeed Insights logo"></div><strong>PageSpeed Insights</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=yoast.com&sz=64" alt="Yoast SEO logo"></div><strong>Yoast SEO</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=rankmath.com&sz=64" alt="Rank Math logo"></div><strong>Rank Math</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=business.google.com&sz=64" alt="Google Business Profile logo"></div><strong>Google Business Profile</strong></div>
+          <div class="tool-card"><div class="tool-logo"><img src="https://www.google.com/s2/favicons?domain=trends.google.com&sz=64" alt="Google Trends logo"></div><strong>Google Trends</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="strengths">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Professional Strengths</span>
+          <h2 class="section-title">What Makes Me <span>Stand Out</span></h2>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal"><div class="icon-box"><i data-lucide="brain"></i></div><p>Strong understanding of SEO fundamentals</p></div>
+          <div class="card reveal"><div class="icon-box"><i data-lucide="list-checks"></i></div><p>Ability to manage multiple SEO tasks</p></div>
+          <div class="card reveal"><div class="icon-box"><i data-lucide="key-round"></i></div><p>Good keyword research and content optimization skills</p></div>
+          <div class="card reveal"><div class="icon-box"><i data-lucide="map-pin"></i></div><p>Knowledge of local SEO and Google Business Profile</p></div>
+          <div class="card reveal"><div class="icon-box"><i data-lucide="clipboard-list"></i></div><p>Consistent in reporting and performance tracking</p></div>
+          <div class="card reveal"><div class="icon-box"><i data-lucide="sprout"></i></div><p>Quick learner and team-oriented professional</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Education & Languages</span>
+          <h2 class="section-title">Academic <span>Background</span></h2>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal">
+            <div class="icon-box"><i data-lucide="graduation-cap"></i></div>
+            <h3>Bachelor of Computer Applications</h3>
+            <p>Punjab University, Chandigarh | 2018 - 2021</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-box"><i data-lucide="book-open"></i></div>
+            <h3>Higher Education</h3>
+            <p>Govt. Senior Secondary School, Sector 45, Chandigarh | 2017 - 2018</p>
+          </div>
+          <div class="card reveal" style="grid-column:1/-1;">
+            <div class="icon-box"><i data-lucide="languages"></i></div>
+            <h3>Languages</h3>
+            <p>Hindi | English | Punjabi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel reveal">
+          <span class="section-tag">Let's Connect</span>
+          <h2>Let's Grow Your Organic Traffic</h2>
+          <p>Ready to improve your search rankings? Fill in the form and I will get back to you with a customized SEO plan.</p>
+          <div class="contact-items">
+            <a class="contact-item" href="tel:6284813650"><i data-lucide="phone" style="width:19px;height:19px;"></i> 6284813650</a>
+            <a class="contact-item" href="mailto:preetykumari1099@gmail.com"><i data-lucide="mail" style="width:19px;height:19px;"></i> preetykumari1099@gmail.com</a>
+            <a class="contact-item" href="https://wa.me/916284813650" target="_blank" rel="noopener"><i data-lucide="message-circle" style="width:19px;height:19px;"></i> Chat on WhatsApp</a>
+            <div class="contact-item"><i data-lucide="map-pin" style="width:19px;height:19px;"></i> Dera Bassi, Punjab</div>
+          </div>
+        </div>
+        <div class="form-panel reveal">
+          <h3>Send SEO Inquiry</h3>
+          <p style="margin-bottom:20px;">Fill in the details below and I will contact you soon.</p>
+          <form id="seoForm" action="https://formspree.io/f/mykovnlq" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New SEO inquiry from Preety Sharma portfolio">
+            <div class="form-grid">
+              <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+              <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+              <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+              <div class="form-group"><label for="website">Website URL</label><input id="website" name="website" type="url" placeholder="https://example.com"></div>
+              <div class="form-group full">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>SEO Audit</option>
+                  <option>On-Page SEO</option>
+                  <option>Off-Page SEO</option>
+                  <option>Local SEO</option>
+                  <option>Technical SEO</option>
+                  <option>Complete SEO Strategy</option>
+                </select>
+              </div>
+              <div class="form-group full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;margin-top:16px;"><i data-lucide="send" style="width:16px;height:16px;"></i> Send SEO Inquiry</button>
+            <div id="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">PREETY SHARMA</div>
+      <div class="footer-role">SEO Executive | SEO Specialist</div>
+      <div class="footer-links">
+        <a href="tel:6284813650"><i data-lucide="phone" style="width:15px;height:15px;"></i> 6284813650</a>
+        <a href="mailto:preetykumari1099@gmail.com"><i data-lucide="mail" style="width:15px;height:15px;"></i> preetykumari1099@gmail.com</a>
+        <a href="https://wa.me/916284813650" target="_blank" rel="noopener"><i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp</a>
+        <span><i data-lucide="map-pin" style="width:15px;height:15px;"></i> Dera Bassi, Punjab</span>
+      </div>
+      <div class="footer-copy">Copyright 2026 Preety Sharma. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => navLinks.classList.remove("open")));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: "-42% 0px -52% 0px" });
+    document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
+
+    const form = document.getElementById("seoForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formMsg = document.getElementById("form-message");
+    const originalSubmit = submitBtn.innerHTML;
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      formMsg.className = "";
+      formMsg.textContent = "";
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        formMsg.className = "error";
+        formMsg.textContent = "Please complete all required fields with valid details.";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Sending...";
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        if (!response.ok) throw new Error("Form submission failed");
+        form.reset();
+        formMsg.className = "success";
+        formMsg.textContent = "Thank you! Your SEO inquiry has been submitted successfully. I will contact you soon.";
+      } catch (error) {
+        formMsg.className = "error";
+        formMsg.textContent = "Something went wrong. Please try again or email me directly at preetykumari1099@gmail.com.";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalSubmit;
+        lucide.createIcons();
+      }
+    });
+
+    document.getElementById("downloadResume").addEventListener("click", () => {
+      const resumeHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>Preety Sharma Resume</title>
+          <style>
+            body { font-family: Figtree, Lexend, Arial, sans-serif; color: #172033; line-height: 1.5; }
+            h1 { color: #1a6bff; font-family: Lexend, Figtree, Arial, sans-serif; margin-bottom: 4px; }
+            h2 { color: #0d1b2a; border-bottom: 1px solid #dde8f5; font-family: Lexend, Figtree, Arial, sans-serif; padding-bottom: 5px; margin-top: 22px; }
+            h3 { margin-bottom: 2px; }
+            p { margin: 4px 0 10px; }
+            li { margin-bottom: 4px; }
+            .meta { color: #405167; font-weight: bold; }
+          </style>
+        </head>
+        <body>
+          <h1>PREETY SHARMA</h1>
+          <p class="meta">SEO Executive | SEO Specialist | Digital Marketing Professional</p>
+          <p>Phone: 6284813650 | Email: preetykumari1099@gmail.com | Location: Bir Bakarpur, Sector 15, Dera Bassi, Punjab</p>
+
+          <h2>Professional Summary</h2>
+          <p>Result-driven and detail-oriented SEO Executive with experience in improving website visibility, search rankings, organic traffic, and brand presence across news portals, service-based businesses, local SEO websites, tattoo websites, and hair care businesses.</p>
+
+          <h2>Core SEO Expertise</h2>
+          <ul>
+            <li>On-Page SEO: keyword research, meta optimization, header tags, URLs, internal linking, image alt tags, content optimization, blog SEO, landing page SEO, and competitor content analysis.</li>
+            <li>Off-Page SEO: backlink creation, guest posting coordination, listings, classifieds, profile creation, social bookmarking, directories, articles, Web 2.0, forums, brand mentions, and backlink monitoring.</li>
+            <li>Technical SEO: website audits, indexing and crawling checks, Google Search Console monitoring, sitemap and robots.txt, broken links, page speed, mobile checks, canonicals, redirects, Core Web Vitals, and schema recommendations.</li>
+            <li>Local SEO: Google Business Profile optimization, local keyword targeting, NAP checks, local citations, map ranking strategies, review suggestions, and location landing pages.</li>
+            <li>SEO Strategy and Reporting: monthly planning, competitor analysis, ranking tracking, organic traffic analysis, SEO reports, content gap analysis, backlink gap analysis, and growth strategy.</li>
+          </ul>
+
+          <h2>Work Experience</h2>
+          <h3>SEO Executive - Fast Visibility Tech, Zirakpur</h3>
+          <p class="meta">2024 - Present</p>
+          <ul>
+            <li>Developed SEO strategies for client websites based on business goals and competition.</li>
+            <li>Performed keyword research for service pages, blogs, and local SEO campaigns.</li>
+            <li>Optimized website pages with proper meta titles, descriptions, headings, URLs, and internal links.</li>
+            <li>Handled off-page SEO activities including backlink building, business listings, classifieds, social bookmarking, and profile creation.</li>
+            <li>Worked on Google Business Profile optimization for local search visibility.</li>
+            <li>Monitored website performance using Google Search Console and Google Analytics.</li>
+            <li>Created SEO reports including ranking progress, traffic performance, backlinks, and completed activities.</li>
+          </ul>
+
+          <h3>SEO Executive + Social Media Management - Mansa Web Solutions</h3>
+          <p class="meta">December 2022 - November 2024</p>
+          <ul>
+            <li>Built backlinks to improve website authority and search engine rankings.</li>
+            <li>Performed keyword research for website pages and blog content.</li>
+            <li>Optimized meta titles, descriptions, headings, and website content.</li>
+            <li>Tracked SEO performance using Google Analytics and Google Search Console.</li>
+            <li>Managed social media posts, content calendars, and posting schedules.</li>
+          </ul>
+
+          <h3>Content Optimization Executive - Punjab News Express</h3>
+          <p class="meta">May 2021 - May 2022</p>
+          <ul>
+            <li>Optimized news content for better search engine visibility.</li>
+            <li>Added relevant keywords naturally into content.</li>
+            <li>Improved headlines, meta descriptions, and article structure.</li>
+            <li>Supported content publishing with SEO best practices.</li>
+          </ul>
+
+          <h2>Projects</h2>
+          <ul>
+            <li><strong>Hair Hub Hillcrest:</strong> Local SEO visibility, Google Business Profile optimization, service keyword targeting, and off-page SEO activities.</li>
+            <li><strong>QuickTattz:</strong> SEO optimization for the tattoo industry website including keyword research, on-page optimization, content suggestions, backlink activities, and visibility improvement strategies.</li>
+          </ul>
+
+          <h2>Skills</h2>
+          <p>Google Analytics, Google Search Console, Keyword Research, On-Page SEO, Off-Page SEO, Technical SEO Audits, Local SEO, Google Business Profile Optimization, Backlink Building, Content Optimization, SEO Reporting, Competitor Analysis, Website Audit, Social Media Management, Canva Basic, MS Office, WordPress SEO Basics.</p>
+
+          <h2>SEO Tools</h2>
+          <p>Google Analytics, Google Search Console, Google Keyword Planner, Ubersuggest, Ahrefs Basic, SEMrush Basic, Screaming Frog Basic, PageSpeed Insights, Yoast SEO, Rank Math, Google Business Profile, Google Trends.</p>
+
+          <h2>Education</h2>
+          <p><strong>Bachelor of Computer Applications</strong><br>Punjab University, Chandigarh | 2018 - 2021</p>
+          <p><strong>Higher Education</strong><br>Govt. Senior Secondary School, Sector 45, Chandigarh | 2017 - 2018</p>
+
+          <h2>Languages</h2>
+          <p>Hindi, English, Punjabi</p>
+        </body>
+        </html>
+      `;
+      const blob = new Blob(["\ufeff", resumeHtml], { type: "application/msword" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Preety-Sharma-SEO-Resume.doc";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    });
+
+    (function initThree() {
+      const canvas = document.getElementById("hero-canvas");
+      if (!window.THREE || !canvas) return;
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 54;
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(window.innerWidth, canvas.parentElement.offsetHeight);
+
+      const count = window.innerWidth < 760 ? 55 : 90;
+      const positions = new Float32Array(count * 3);
+      const linePositions = [];
+      for (let i = 0; i < count; i++) {
+        const index = i * 3;
+        positions[index] = (Math.random() - 0.5) * 120;
+        positions[index + 1] = (Math.random() - 0.5) * 62;
+        positions[index + 2] = (Math.random() - 0.5) * 38;
+      }
+      for (let i = 0; i < count - 1; i += 2) {
+        const a = i * 3;
+        const b = (i + 1) * 3;
+        linePositions.push(positions[a], positions[a + 1], positions[a + 2], positions[b], positions[b + 1], positions[b + 2]);
+      }
+
+      const particleGeometry = new THREE.BufferGeometry();
+      particleGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      const particles = new THREE.Points(particleGeometry, new THREE.PointsMaterial({ color: 0x00b884, size: 0.7, transparent: true, opacity: 0.7 }));
+      scene.add(particles);
+
+      const lineGeometry = new THREE.BufferGeometry();
+      lineGeometry.setAttribute("position", new THREE.Float32BufferAttribute(linePositions, 3));
+      const lines = new THREE.LineSegments(lineGeometry, new THREE.LineBasicMaterial({ color: 0x1a6bff, transparent: true, opacity: 0.16 }));
+      scene.add(lines);
+
+      function resize() {
+        const height = canvas.parentElement.offsetHeight;
+        camera.aspect = window.innerWidth / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, height);
+      }
+      window.addEventListener("resize", resize);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const time = Date.now() * 0.00035;
+        particles.rotation.y = time;
+        lines.rotation.y = time;
+        particles.rotation.x = Math.sin(time) * 0.08;
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+</body>
+</html>
